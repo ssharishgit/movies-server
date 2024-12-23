@@ -1,4 +1,4 @@
-const userRoutes = require("./routes/userRouter")
+const movieRoutes = require("./routes/movieRouter")
 const dotenv = require('dotenv')
 const cors = require('cors')
 const connection =  require('./db/connection')
@@ -16,10 +16,10 @@ app.use(express.json())
 
 // root end point
 app.get('/',(req,res)=>{
-  res.send("User Authentication and Authorization")
+  res.send("Movie Ticket Booking System")
 })
 
-app.use(userRoutes)
+app.use(movieRoutes)
 // listen to port
 app.listen(PORT,()=>{
   console.log("Server started at",PORT)
